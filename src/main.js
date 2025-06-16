@@ -21,14 +21,12 @@ document.querySelector('#app').innerHTML = `
     </section>
     <section id="about">
       <h2>About Me</h2>
-      <p>Hello! I’m Max, a passionate web developer with skills in React, JavaScript, and more. I love building clean, performant websites and apps. 
-      
-      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>
+      Motivated Computer Science undergraduate specialising in high-performance graphics and games
+      engineering. Experienced with C++, OpenGL, Visual Studio, and GitHub. Passionate about building
+      creative and efficient real-time applications. Seeking opportunities to contribute technical expertise
+      and a strong work ethic to the graphics or game development industry.
+      </p>
     </section>
 
     <section id="projects" class="projects">
@@ -36,7 +34,12 @@ document.querySelector('#app').innerHTML = `
       <ul class="outer_ul">
         <li id="full_width">
           <strong>Heatstroke Engine</strong>
-          <iframe src="/Heatstroke/Heatstroke_Video_Portfolio.mp4" title="proj_1"></iframe>
+          <div class="media-container">
+            <video class="media" muted playsinline loop>
+              <source src="/Heatstroke/Heatstroke_Video_Portfolio.mp4" type="video/mp4"/>
+              Your browser does not support the video tag.
+            </video>
+          </div>
           <div class="collapsible collapsed">
             <p>
               The Heatstroke Engine was a group project developed during my Master's program. We built a fully featured game engine from the ground up, including:
@@ -61,8 +64,8 @@ document.querySelector('#app').innerHTML = `
         </li>
         <li>
           <strong>Shadow Mapping</strong>
-          <div class="image-container">
-            <img id="shadowMappingImg" src="/Shadow_Mapping/shadow_mapping_1" alt="Shadow Mapping" />
+          <div class="media-container">
+            <img id="shadowMappingImg" class="media" src="/Shadow_Mapping/shadow_mapping_1" alt="Shadow Mapping" />
             <div id="shadowMappingCaption" class="image-caption">Shadow Mapping</div>
           </div>
           <div class="collapsible collapsed">
@@ -74,21 +77,67 @@ document.querySelector('#app').innerHTML = `
           </div>
           <button class="show_btn">Show More</button>
         </li>
+        <!--
         <li>
           <strong>Recursive NEE Raytracer</strong>
           <iframe src="https://yourproject1.example.com" title="proj_3"></iframe>
         </li>
+        -->
         <li>
           <strong>Mesh Processing and Repair Pipeline</strong>
-          <iframe src="https://yourproject1.example.com" title="proj_4"></iframe>
+          <div class="media-container">
+            <video class="media" muted playsinline loop>
+              <source src="/Mesh_Repair/video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="collapsible collapsed">
+            <p>
+            In this project, I developed a processing pipeline for 3D meshes, converting raw triangle data into more structured formats to facilitate analysis and repair.
+            I implemented tools to convert between file formats, including triangle soup (.tri), face index (.face), and directed edge (.diredge) representations.
+            Using these formats, I created algorithms to test if meshes are manifold by detecting problematic edges or vertices.
+            For manifold meshes, I applied the Euler formula to calculate their genus, revealing their topological properties.
+            The main focus was on automatic mesh repair, where I identified holes by finding unpaired edges, traced their boundaries, and repositioned vertices to close these gaps.
+            The repaired meshes became manifold and ready for further use without manual fixes.
+            </p>
+            <div class="fade"></div>
+          </div>
+          <button class="show_btn">Show More</button>
         </li>
         <li>
           <strong>Bézier Surface Rendering</strong>
-          <iframe src="https://yourproject1.example.com" title="proj_5"></iframe>
+          <div class="media-container">
+            <img class="media" src="/Bezier_Curve/img.png" alt="Bezier Curve" />
+          </div>
+          <div class="collapsible collapsed">
+            <p>
+               I implemented a series of foundational computer graphics techniques, starting with developing a mathematics library for handling points, vectors, and matrices to perform geometric computations.
+               I then developed routines to draw basic primitives such as axes and lines using parametric methods without relying on OpenGL, ensuring a deeper understanding of rendering at the pixel level.
+               The project progressed to applying transformations through rotation matrices and managing different projection types, culminating in the rendering of Bezier curves and patches using the de Casteljau algorithm.
+               Finally, through parallelisation and OpenMP, I maximised the performance of the CPU based rendering algorithms.
+               Overall, I gained practical experience with the core concepts and algorithms that underpin computer graphics.
+            </p>
+          </div>
+          <button class="show_btn">Show More</button>
         </li>
         <li>
-          <strong>Sports Centre Management System</strong>
-          <iframe src="https://yourproject1.example.com" title="proj_6"></iframe>
+         <strong>Sports Centre Management System</strong>
+          <div class="media-container">
+            <video id="gymVideo" class="media" muted playsinline loop>
+              <source src="/Gym_Corp/video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="collapsible collapsed">
+            <p>
+            In this project, I collaborated with my team to develop a sports centre management system for GymCorp, enabling customers to register, book, and pay for facility use, while providing staff and managers with administrative access.
+            We developed a full-stack client-server web application using Flask with Flask-SQLAlchemy for the backend API, React for the frontend interface, and Node.js with Yarn for dependency management and build processes.
+            Throughout three development sprints, we followed a Scrum-based methodology with regular planning, stand-ups, and review meetings.
+            We used GitHub extensively for version control, issue tracking, and CI/CD via GitHub Actions, and documented our process and testing strategy in the project wiki.
+            </p>
+            <div class="fade"></div>
+          </div>
+          <button class="show_btn">Show More</button>
         </li>
         <li>
           <strong>Rocket demo</strong>
@@ -104,12 +153,14 @@ document.querySelector('#app').innerHTML = `
     <section id="skills_contact">
       <h2>Skills & Contact Info</h2>
       <ul class="skills">
-        <li>React</li>
-        <li>JavaScript</li>
-        <li>Vite</li>
-        <li>CSS3</li>
-        <li>HTML5</li>
-        <li>Git & GitHub</li>
+        <li>C++</li>
+        <li>C</li>
+        <li>Vulkan</li>
+        <li>OpenGL</li>
+        <li>Networking</li>
+        <li>Version Control - Git</li>
+        <li>Frontend</li>
+        <li>Backend</li>
       </ul>
       <p>Email: maxwgrobertson@gmail.com</p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/maxwell-wg-robertson/" target="_blank" class="contact-link">linkedin.com/in/maxwell-wg-robertson/</a></p>
@@ -153,14 +204,44 @@ function highlightSection(section) {
 const headerHeight = document.querySelector('header').offsetHeight;
 const offset = headerHeight + 10;
 
+function smoothScrollTo(yTarget, duration = 500) {
+  const start = window.scrollY;
+  const change = yTarget - start;
+  const startTime = performance.now();
+
+  function animateScroll(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = easeInOutQuad(progress);
+
+    window.scrollTo(0, start + change * ease);
+
+    if (progress < 1) {
+      requestAnimationFrame(animateScroll);
+    }
+  }
+
+  function easeInOutQuad(t) {
+    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  }
+
+  requestAnimationFrame(animateScroll);
+}
+
 navButtons.forEach(button => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
     const targetId = button.getAttribute('data-target');
     const targetSection = document.getElementById(targetId);
+
     if (targetSection) {
-      const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
       setActiveTab(button);
+
+      const headerHeight = document.querySelector('header').offsetHeight;
+      const sectionTop = targetSection.getBoundingClientRect().top + window.scrollY;
+      const targetY = sectionTop - headerHeight - 10;
+
+      smoothScrollTo(targetY);
     }
   });
 });
@@ -198,7 +279,6 @@ function updateActiveSection() {
   }
 }
 
-
 window.addEventListener('scroll', updateActiveSection);
 window.addEventListener('load', updateActiveSection);
 
@@ -221,6 +301,46 @@ darkModeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   label.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
 });
+
+// Video auto-play selector
+const videos = document.querySelectorAll('video');
+
+videos.forEach(video => {
+  video.play().catch(e => {
+    // Handle play promise rejection (e.g., user interaction required)
+    console.warn('Video play failed:', e);
+  });
+});
+
+// const observer = new IntersectionObserver(
+//   entries => {
+//     let maxRatio = 0;
+//     let bestVideo = null;
+
+//     entries.forEach(entry => {
+//       const ratio = entry.intersectionRatio;
+//       if (ratio > maxRatio) {
+//         maxRatio = ratio;
+//         bestVideo = entry.target;
+//       }
+//     });
+
+//     videos.forEach(video => {
+//       if (video === bestVideo && maxRatio > 0.5) {
+//         if (video.paused) video.play();
+//       } else {
+//         if (!video.paused) video.pause();
+//       }
+//     });
+//   },
+//   {
+//     threshold: Array.from({ length: 11 }, (_, i) => i / 10), // [0, 0.1, ..., 1.0]
+//   }
+// );
+
+// videos.forEach(video => {
+//   observer.observe(video);
+// });
 
 // Show more buttons
 const showBtns = document.querySelectorAll(".show_btn");
@@ -336,3 +456,7 @@ setInterval(() => {
   
   index = (index + 1) % imageFilenames.length;
 }, 1000);
+
+// Gym Video speed-up
+const video = document.getElementById('gymVideo');
+video.playbackRate = 2.0;
