@@ -26,10 +26,9 @@ document.querySelector('#app').innerHTML = `
     <section id="about">
       <h2>About Me</h2>
       <p>
-      Motivated Computer Science undergraduate specialising in high-performance graphics and games
-      engineering. Experienced with C++, OpenGL, Visual Studio, and GitHub. Passionate about building
-      creative and efficient real-time applications. Seeking opportunities to contribute technical expertise
-      and a strong work ethic to the graphics or game development industry.
+      Motivated Computer Science graduate specialising in high-performance graphics and games engineering.
+      Experienced with C++, C, Vulkan, OpenGL, GitHub and Visual Studio. Passionate about building creative and efficient real-time applications.
+      Whilst my primary interest lies in graphics and game development, I am also open to opportunities in other areas of computer science where I can contribute my technical expertise, adaptability, and strong work ethic.
       </p>
     </section>
 
