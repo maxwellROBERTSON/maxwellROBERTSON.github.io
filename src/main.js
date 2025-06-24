@@ -13,12 +13,10 @@ document.querySelector('#app').innerHTML = `
           <a href="/public/Maxwell_Robertson_CV_gen.pdf" target="_blank">General CV</a>
         </div>
       </div>
-    </nav>
-    <div>
       <button class="btn-toggle" id="darkModeToggle">
         <span class="label">Dark Mode</span>
       </button>
-    </div>
+    </nav>
   </header>
 
   <main>
@@ -181,6 +179,26 @@ document.querySelector('#app').innerHTML = `
 const navButtons = document.querySelectorAll('nav button[role="tab"]');
 const sections = document.querySelectorAll('main section');
 
+function adjustNavWidth() {
+  const btnToggle = document.querySelector('.btn-toggle');
+  const nav = document.querySelector('nav');
+
+  if (!btnToggle || !nav) return;
+
+  const btnWidth = btnToggle.offsetWidth;   // button width in pixels
+  const headerWidth = nav.parentElement.offsetWidth;  // total header width (assuming nav and button share header container)
+
+  // Calculate nav width to leave space for button + some margin (e.g. 1rem = 16px)
+  const marginRight = 16; // adjust as needed
+  const newNavWidth = headerWidth - btnWidth - marginRight;
+
+  nav.style.width = `${newNavWidth}px`;
+}
+
+// Call on load and on window resize
+window.addEventListener('load', adjustNavWidth);
+window.addEventListener('resize', adjustNavWidth);
+
 function setActiveTab(button) {
   navButtons.forEach(btn => {
     btn.classList.remove('active');
@@ -320,36 +338,6 @@ videos.forEach(video => {
     console.warn('Video play failed:', e);
   });
 });
-
-// const observer = new IntersectionObserver(
-//   entries => {
-//     let maxRatio = 0;
-//     let bestVideo = null;
-
-//     entries.forEach(entry => {
-//       const ratio = entry.intersectionRatio;
-//       if (ratio > maxRatio) {
-//         maxRatio = ratio;
-//         bestVideo = entry.target;
-//       }
-//     });
-
-//     videos.forEach(video => {
-//       if (video === bestVideo && maxRatio > 0.5) {
-//         if (video.paused) video.play();
-//       } else {
-//         if (!video.paused) video.pause();
-//       }
-//     });
-//   },
-//   {
-//     threshold: Array.from({ length: 11 }, (_, i) => i / 10), // [0, 0.1, ..., 1.0]
-//   }
-// );
-
-// videos.forEach(video => {
-//   observer.observe(video);
-// });
 
 // Show more buttons
 const showBtns = document.querySelectorAll(".show_btn");

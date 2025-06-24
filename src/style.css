@@ -37,6 +37,7 @@ p {
   line-height: 1.6;
 }
 nav button[role="tab"] {
+  font-size: 1.0rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -66,27 +67,20 @@ nav button[role="tab"]:hover {
 body.dark nav button[role="tab"]:hover {
   border-bottom-color: #855ee1;
 }
-.btn-cv {
-  background: #e0e0e0;
-  color: #2e2e2e;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  display: inline-block;
-  transition: background-color 0.3s, color 0.3s;
-}
-body.dark .btn-cv {
-  background: #424242;
-  color: #f0f0f0;
-}
 .btn-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
   background: #2e2e2e;
-  color: #ffffff;
+  color: #fff;
   border-radius: 4px;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
-  display: inline-block;
+  font-size: 1.0rem;
+  cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+  z-index: 10;
 }
 body.dark .btn-toggle {
   background: #f0f0f0;
@@ -94,7 +88,7 @@ body.dark .btn-toggle {
 }
 .dropdown {
   display: inline-block;
-  position: fixed;
+  position: flex;
 }
 .dropdown-content {
   display: none;
