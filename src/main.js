@@ -6,7 +6,13 @@ document.querySelector('#app').innerHTML = `
       <button role="tab" aria-selected="true" tabindex="0" data-target="about" class="nav-link active">About Me</button>
       <button role="tab" aria-selected="false" tabindex="-1" data-target="projects" class="nav-link">My Projects</button>
       <button role="tab" aria-selected="false" tabindex="-1" data-target="skills_contact" class="nav-link">Skills & Contact Info</button>
-      <button role="tab" id="downloadCV" aria-selected="false" tabindex="-1" class="nav-link">Download CV</button>
+      <div class="dropdown">
+        <button id="downloadCV" role="tab" aria-selected="false" tabindex="-1" class="nav-link">Download CV ▼</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/public/Maxwell_Robertson_CV.pdf" target="_blank">Graphics CV</a>
+          <a href="/public/Maxwell_Robertson_CV_gen.pdf" target="_blank">General CV</a>
+        </div>
+      </div>
     </nav>
     <div>
       <button class="btn-toggle" id="darkModeToggle">
@@ -285,14 +291,15 @@ window.addEventListener('scroll', updateActiveSection);
 window.addEventListener('load', updateActiveSection);
 
 // Download CV functionality
-const downloadCV = document.getElementById('downloadCV');
-document.getElementById('downloadCV').addEventListener('click', () => {
-  const link = document.createElement('a');
-  link.href = '/Maxwell_Robertson_CV.pdf';
-   link.download = 'Maxwell_Robertson_CV.pdf';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+document.getElementById('downloadCV').addEventListener('click', function(event) {
+  event.stopPropagation();
+  document.getElementById('myDropdown').classList.toggle('show');
+});
+window.addEventListener('click', function() {
+  const dropdown = document.getElementById('myDropdown');
+  if (dropdown.classList.contains('show')) {
+    dropdown.classList.remove('show');
+  }
 });
 
 // Dark mode toggle functionality

@@ -92,6 +92,44 @@ body.dark .btn-toggle {
   background: #f0f0f0;
   color: #2e2e2e;
 }
+.dropdown {
+  display: inline-block;
+  position: fixed;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #dcdcdc;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  z-index: 1000;
+}
+body.dark .dropdown-content {
+  background-color: #1e1e1e;
+}
+.dropdown-content a {
+  color: black;
+  font-size: 0.8rem;
+  padding: 0.7rem;
+  text-decoration: none;
+  display: block;
+  border-radius: 6px;
+}
+body.dark .dropdown-content a {
+  color: #f0f0f0;
+}
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+body.dark .dropdown-content a:hover {
+  background-color: #353535;
+}
+.show {
+  display: block;
+}
 main {
   padding-top: 3%;
   padding-bottom: 3%;
