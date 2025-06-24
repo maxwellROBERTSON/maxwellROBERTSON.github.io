@@ -35,7 +35,7 @@ document.querySelector('#app').innerHTML = `
         <li id="full_width">
           <strong>Heatstroke Engine</strong>
           <div class="media-container">
-            <video class="media" muted playsinline loop>
+            <video class="media" muted playsinline loop autoplay controls>
               <source src="/Heatstroke/Heatstroke_Video_Portfolio.mp4" type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
@@ -86,7 +86,7 @@ document.querySelector('#app').innerHTML = `
         <li>
           <strong>Mesh Processing and Repair Pipeline</strong>
           <div class="media-container">
-            <video class="media" muted playsinline loop>
+            <video class="media" muted playsinline loop autoplay controls>
               <source src="/Mesh_Repair/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -123,14 +123,14 @@ document.querySelector('#app').innerHTML = `
         <li>
          <strong>Sports Centre Management System</strong>
           <div class="media-container">
-            <video id="gymVideo" class="media" muted playsinline loop>
+            <video id="gymVideo" class="media" muted playsinline loop autoplay controls>
               <source src="/Gym_Corp/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
           <div class="collapsible collapsed">
             <p>
-            In this project, I collaborated with my team to develop a sports centre management system for GymCorp, enabling customers to register, book, and pay for facility use, while providing staff and managers with administrative access.
+            GymCorp is a sports centre management system I developed with a team at University, enabling customers to register, book, and pay for facility use, while providing staff and managers with administrative access.
             We developed a full-stack client-server web application using Flask with Flask-SQLAlchemy for the backend API, React for the frontend interface, and Node.js with Yarn for dependency management and build processes.
             Throughout three development sprints, we followed a Scrum-based methodology with regular planning, stand-ups, and review meetings.
             We used GitHub extensively for version control, issue tracking, and CI/CD via GitHub Actions, and documented our process and testing strategy in the project wiki.
@@ -139,6 +139,7 @@ document.querySelector('#app').innerHTML = `
           </div>
           <button class="show_btn">Show More</button>
         </li>
+        <!--
         <li>
           <strong>Rocket demo</strong>
           <iframe src="https://yourproject1.example.com" title="proj_7"></iframe>
@@ -147,6 +148,7 @@ document.querySelector('#app').innerHTML = `
           <strong>2D Renderer</strong>
           <iframe src="https://yourproject1.example.com" title="proj_8"></iframe>
         </li>
+        -->
       </ul>
     </section>
 
